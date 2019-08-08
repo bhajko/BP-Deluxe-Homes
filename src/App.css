@@ -17,7 +17,7 @@
 }
 /* globals */
 body {
-  padding-top: 66px;
+  padding-top: 60px;
   color: var(--mainBlack);
   background: var(--mainWhite);
   font-family: "inter";
@@ -100,6 +100,11 @@ h6 {
 .nav-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.nav-header a {
+  height: 24px;
 }
 .nav-btn {
   background: transparent;
@@ -135,6 +140,11 @@ h6 {
 .show-nav {
   height: 160px;
 }
+@media screen and (max-width: 767) {
+  body {
+    padding-top: 50px;
+  }
+}
 @media screen and (min-width: 768px) {
   .nav-btn {
     display: none;
@@ -143,6 +153,7 @@ h6 {
     max-width: 1170px;
     margin: 0 auto;
     display: flex;
+    justify-content: space-between;
   }
   .nav-links {
     height: auto;
@@ -158,14 +169,14 @@ h6 {
 /* Hero */
 .defaultHero,
 .apartmentsHero {
-  min-height: calc(100vh - 66px);
-  background: url("./images/hero-bg-2.jpg") center/cover no-repeat;
+  min-height: calc(100vh - 60px);
+  background: url("./images/hero-bg.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .apartmentsHero {
-  /* background-image: url("./images/room-2.jpeg"); */
+  background-image: url("./images/hero-bg-2.jpg");
   min-height: 60vh;
 }
 /* End of Hero */
