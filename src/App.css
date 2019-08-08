@@ -157,14 +157,14 @@ h6 {
 /* end of navbar */
 /* Hero */
 .defaultHero,
-.roomsHero {
+.apartmentsHero {
   min-height: calc(100vh - 66px);
   background: url("./images/hero-bg-2.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.roomsHero {
+.apartmentsHero {
   /* background-image: url("./images/room-2.jpeg"); */
   min-height: 60vh;
 }
@@ -270,12 +270,12 @@ h6 {
   }
 }
 /*end of services */
-/* featured rooms */
+/* featured apartments */
 
-.featured-rooms {
+.featured-apartments {
   padding: 5rem 0;
 }
-.featured-rooms-center {
+.featured-apartments-center {
   width: 80vw;
   margin: 0 auto;
   display: grid;
@@ -284,18 +284,18 @@ h6 {
   grid-column-gap: 40px;
 }
 @media screen and (min-width: 776px) {
-  .featured-rooms-center {
+  .featured-apartments-center {
     width: 90vw;
     grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   }
 }
 @media screen and (min-width: 992px) {
-  .featured-rooms-center {
+  .featured-apartments-center {
     width: 95vw;
     max-width: 1170px;
   }
 }
-/* end pf featured rooms */
+/* end pf featured apartments */
 /* room */
 .room {
   box-shadow: var(--lightShadow);
@@ -435,10 +435,10 @@ h6 {
 }
 /* end of single room*/
 /* roomlist */
-.roomslist {
+.apartmentslist {
   padding: 5rem 0;
 }
-.roomslist-center {
+.apartmentslist-center {
   width: 80vw;
   margin: 0 auto;
   display: grid;
@@ -448,18 +448,18 @@ h6 {
 }
 
 @media screen and (min-width: 776px) {
-  .roomslist-center {
+  .apartmentslist-center {
     width: 90vw;
   }
 }
 @media screen and (min-width: 992px) {
-  .roomslist-center {
+  .apartmentslist-center {
     width: 95vw;
     max-width: 1170px;
   }
 }
 /* end of roomlist */
-/*  rooms fitler*/
+/*  apartments fitler*/
 .filter-container {
   padding: 5rem 0;
 }
@@ -510,4 +510,4 @@ h6 {
     max-width: 1170px;
   }
 }
-/* end of rooms fitler*/
+/* end of apartments fitler*/

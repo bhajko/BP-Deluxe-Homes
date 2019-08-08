@@ -1,7 +1,8 @@
 import React from "react";
+import Hero from "../components/Hero";
 
 const Apartments = () => {
-  return <div>hello from Apartments page</div>;
+  return <Hero hero="apartmentsHero" />;
 };
 
 export default Apartments;

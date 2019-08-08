@@ -1,7 +1,8 @@
 import React from "react";
+import Hero from "../components/Hero";
 
 const NotFound = () => {
-  return <div>hello from 404 page</div>;
+  return <Hero />;
 };
 
 export default NotFound;
