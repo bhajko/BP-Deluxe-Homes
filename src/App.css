@@ -12,8 +12,8 @@
   --darkGrey: #cfcfcf;
   --mainTransition: all 0.3s ease-in-out;
   --mainSpacing: 3px;
-  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
-  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  --lightShadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  --darkShadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
 }
 /* globals */
 body {
@@ -68,7 +68,7 @@ h6 {
 }
 .btn-primary:hover {
   background: transparent;
-  color: var(--primaryColor);
+  color: var(--mainWhite);
 }
 .loading {
   text-transform: capitalize;
@@ -324,12 +324,12 @@ h6 {
   }
 }
 /* end pf featured apartments */
-/* room */
-.room {
+/* apartment */
+.apartment {
   box-shadow: var(--lightShadow);
   transition: var(--mainTransition);
 }
-.room:hover {
+.apartment:hover {
   box-shadow: var(--darkShadow);
 }
 
@@ -359,7 +359,7 @@ h6 {
   font-weight: 300;
   letter-spacing: var(--mainSpacing);
 }
-.room-link {
+.apartment-link {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -375,24 +375,25 @@ h6 {
 .img-container:hover .price-top {
   opacity: 0;
 }
-.img-container:hover .room-link {
+.img-container:hover .apartment-link {
   transform: translate(-50%, -50%) scale(1);
 }
-.room-info {
-  background: var(--darkGrey);
+.apartment-info {
+  background: var(--primaryColor);
+  color: var(--mainWhite);
   text-transform: capitalize;
   padding: 0.5rem 0;
   text-align: center;
   font-weight: 700;
   letter-spacing: var(--mainSpacing);
 }
-/* end of room  */
-/* single room*/
+/* end of apartment  */
+/* single apartment*/
 
-.single-room {
+.single-apartment {
   padding: 5rem 0 0 0;
 }
-.single-room-images {
+.single-apartment-images {
   width: 80vw;
   margin: 0 auto;
   display: grid;
@@ -400,11 +401,11 @@ h6 {
   grid-row-gap: 2rem;
   grid-column-gap: 50px;
 }
-.single-room-images img {
+.single-apartment-images img {
   width: 100%;
   display: block;
 }
-.single-room-info {
+.single-apartment-info {
   width: 80vw;
   display: grid;
   grid-template-columns: 1fr;
@@ -430,11 +431,11 @@ h6 {
 .info h6 {
   font-weight: 300;
 }
-.room-extras {
+.apartment-extras {
   width: 80vw;
   margin: 0 auto 3rem auto;
 }
-.room-extras h6 {
+.apartment-extras h6 {
   text-transform: capitalize;
   letter-spacing: var(--mainSpacing);
 }
@@ -446,13 +447,13 @@ h6 {
   grid-row-gap: 1rem;
 }
 @media screen and (min-width: 992px) {
-  .single-room-images,
-  .single-room-info,
-  .room-extras {
+  .single-apartment-images,
+  .single-apartment-info,
+  .apartment-extras {
     width: 95vw;
     max-width: 1170px;
   }
-  .single-room-info {
+  .single-apartment-info {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 2rem;
@@ -461,8 +462,8 @@ h6 {
     padding-left: 3rem;
   }
 }
-/* end of single room*/
-/* roomlist */
+/* end of single apartment*/
+/* apartmentlist */
 .apartmentslist {
   padding: 5rem 0;
 }
@@ -486,7 +487,7 @@ h6 {
     max-width: 1170px;
   }
 }
-/* end of roomlist */
+/* end of apartmentlist */
 /*  apartments fitler*/
 .filter-container {
   padding: 5rem 0;
