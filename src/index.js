@@ -3,12 +3,15 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+import { ApartmentProvider } from "./context";
 import "typeface-inter";
 
 ReactDOM.render(
-  <Router>
-    <App />
-  </Router>,
+  <ApartmentProvider>
+    <Router>
+      <App />
+    </Router>
+  </ApartmentProvider>,
   document.getElementById("root")
 );
 

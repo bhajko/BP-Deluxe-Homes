@@ -96,7 +96,7 @@ h6 {
   width: 100%;
   padding: 0.75rem 2rem;
   background: var(--offWhite);
-  z-index: 1;
+  z-index: 2;
 }
 .nav-header {
   display: flex;
@@ -200,20 +200,19 @@ h6 {
 /* Banner */
 .banner {
   display: inline-block;
-  /* background: rgba(0, 0, 0, 0.5); */
   color: var(--mainWhite);
   padding: 2rem 1rem;
   text-align: center;
   text-transform: capitalize;
   letter-spacing: var(--mainSpacing);
-  z-index: 2;
+  z-index: 1;
 }
 .banner h1 {
   font-size: 2.5rem;
 }
 .banner div {
   width: 10rem;
-  height: 5px;
+  height: 4px;
   background: var(--primaryColor);
   margin: 1.7rem auto;
 }
@@ -251,7 +250,7 @@ h6 {
 }
 .section-title div {
   width: 5rem;
-  height: 5px;
+  height: 4px;
   margin: 0 auto;
   background: var(--primaryColor);
 }
@@ -262,7 +261,7 @@ h6 {
   padding: 5rem 0;
 }
 .services {
-  background: var(--darkGrey);
+  background: var(--mainWhite);
   text-align: center;
 }
 .services-center {
