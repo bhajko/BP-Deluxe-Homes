@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { TiThMenu } from "react-icons/ti";
 import logo from "../images/logo.svg";
 
@@ -16,9 +16,9 @@ class Navbar extends Component {
       <nav className="navbar">
         <div className="nav-center">
           <div className="nav-header">
-            <Link to="/">
+            <NavLink to="/">
               <img src={logo} alt="logo" />
-            </Link>
+            </NavLink>
             <button type="button" className="nav-btn" onClick={this.toggle}>
               <TiThMenu className="nav-icon" />
             </button>
@@ -28,13 +28,29 @@ class Navbar extends Component {
               className={this.state.isOpen ? "nav-links show-nav" : "nav-links"}
             >
               <li>
-                <Link to="/">Home</Link>
+                <NavLink
+                  exact
+                  to="/"
+                  activeStyle={{ boxShadow: "inset 0 -3px 0 #BF9B30" }}
+                >
+                  Home
+                </NavLink>
               </li>
               <li>
-                <Link to="/apartments">Apartments</Link>
+                <NavLink
+                  to="/apartments"
+                  activeStyle={{ boxShadow: "inset 0 -3px 0 #BF9B30" }}
+                >
+                  Apartments
+                </NavLink>
               </li>
               <li>
-                <Link to="/contact">Contact</Link>
+                <NavLink
+                  to="/contact"
+                  activeStyle={{ boxShadow: "inset 0 -3px 0 #BF9B30" }}
+                >
+                  Contact
+                </NavLink>
               </li>
             </ul>
           </div>

@@ -57,10 +57,11 @@ h6 {
   display: inline-block;
   text-decoration: none;
   letter-spacing: var(--mainSpacing);
-  color: var(--mainBlack);
+  color: var(--mainWhite);
   background: var(--primaryColor);
   padding: 0.4rem 0.9rem;
   border: 3px solid var(--primaryColor);
+  border-radius: 3px;
   transition: var(--mainTransition);
   text-transform: uppercase;
   cursor: pointer;
@@ -135,11 +136,11 @@ h6 {
   letter-spacing: var(--mainSpacing);
 }
 .nav-links a:hover {
-  color: var(--primaryColor);
+  box-shadow: inset 0 -3px 0 var(--primaryColor);
 }
 
 .show-nav {
-  height: 160px;
+  height: 162px;
 }
 
 @media screen and (min-width: 768px) {
@@ -199,12 +200,13 @@ h6 {
 /* Banner */
 .banner {
   display: inline-block;
-  background: rgba(0, 0, 0, 0.5);
+  /* background: rgba(0, 0, 0, 0.5); */
   color: var(--mainWhite);
   padding: 2rem 1rem;
   text-align: center;
   text-transform: capitalize;
   letter-spacing: var(--mainSpacing);
+  z-index: 2;
 }
 .banner h1 {
   font-size: 2.5rem;
