@@ -379,8 +379,8 @@ h6 {
   transform: translate(-50%, -50%) scale(1);
 }
 .apartment-info {
-  background: var(--primaryColor);
-  color: var(--mainWhite);
+  background: var(--mainGrey);
+  color: var(--mainBlack);
   text-transform: capitalize;
   padding: 0.5rem 0;
   text-align: center;
