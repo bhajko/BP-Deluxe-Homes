@@ -87,6 +87,17 @@ h6 {
   padding: 1rem;
   letter-spacing: var(--mainSpacing);
 }
+@media only screen and (max-width: 321px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
 /* end of globals */
 /* Navbar */
 .navbar {
@@ -136,7 +147,7 @@ h6 {
   letter-spacing: var(--mainSpacing);
 }
 .nav-links a:hover {
-  box-shadow: inset 0 -3px 0 var(--primaryColor);
+  color: var(--primaryColor);
 }
 
 .show-nav {
@@ -253,6 +264,16 @@ h6 {
   height: 4px;
   margin: 0 auto;
   background: var(--primaryColor);
+}
+@media only screen and (max-width: 321px) {
+  .section-title h4 {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .section-title h4 {
+    font-size: 1.8em;
+  }
 }
 /* end of Title */
 

@@ -28,27 +28,17 @@ class Navbar extends Component {
               className={this.state.isOpen ? "nav-links show-nav" : "nav-links"}
             >
               <li>
-                <NavLink
-                  exact
-                  to="/"
-                  activeStyle={{ boxShadow: "inset 0 -3px 0 #BF9B30" }}
-                >
+                <NavLink exact to="/" activeStyle={{ color: "#BF9B30" }}>
                   Home
                 </NavLink>
               </li>
               <li>
-                <NavLink
-                  to="/apartments"
-                  activeStyle={{ boxShadow: "inset 0 -3px 0 #BF9B30" }}
-                >
+                <NavLink to="/apartments" activeStyle={{ color: "#BF9B30" }}>
                   Apartments
                 </NavLink>
               </li>
               <li>
-                <NavLink
-                  to="/contact"
-                  activeStyle={{ boxShadow: "inset 0 -3px 0 #BF9B30" }}
-                >
+                <NavLink to="/contact" activeStyle={{ color: "#BF9B30" }}>
                   Contact
                 </NavLink>
               </li>
