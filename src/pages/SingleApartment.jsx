@@ -50,7 +50,7 @@ class SingleApartment extends Component {
         <section className="single-apartment">
           <div className="single-apartment-images">
             {images.map((item, index) => {
-              return <img kex={index} src={item} alt={name} />;
+              return <img key={index} src={item} alt={name} />;
             })}
           </div>
           <div className="single-apartment-info">
