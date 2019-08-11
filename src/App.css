@@ -97,7 +97,6 @@ h6 {
     font-size: 16px;
   }
 }
-
 /* end of globals */
 /* Navbar */
 .navbar {
@@ -177,9 +176,10 @@ h6 {
 /* end of navbar */
 /* Hero */
 .defaultHero,
-.apartmentsHero {
+.apartmentsHero,
+.contactHero {
   min-height: calc(100vh - 45px);
-  background: url("./images/hero-bg.jpg") center/cover no-repeat;
+  background: url("./images/heroBg.png") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -195,10 +195,23 @@ h6 {
   background: rgba(0, 0, 0, 0.3);
 }
 .apartmentsHero {
-  background-image: url("./images/hero-bg-2.jpg");
+  background-image: url("./images/apartmentsBg.png");
   min-height: 60vh;
 }
 .apartmentsHero:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: calc(60vh + 45px);
+  background: rgba(0, 0, 0, 0.3);
+}
+.contactHero {
+  background-image: url("./images/contactBg.png");
+  min-height: 60vh;
+}
+.contactHero:after {
   content: "";
   position: absolute;
   top: 0;
@@ -634,6 +647,30 @@ input[type="range"]::-webkit-slider-thumb {
   }
 }
 /* end of apartments fitler*/
+/* Contact*/
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+}
+.map {
+  width: 500px;
+}
+.contact-details-inner {
+  display: flex;
+  margin-bottom: 2em;
+}
+.contactIcon {
+  margin-right: 1em;
+}
+
+@media only screen and (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+}
+/* end of Contact*/
 /* Footer */
 .footer {
   display: flex;
