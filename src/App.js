@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Apartments from "./pages/Apartments";
 import SingleApartment from "./pages/SingleApartment";
@@ -19,6 +20,7 @@ function App() {
         <Route exact path="/contact" component={Contact} />
         <Route component={NotFound} />
       </Switch>
+      <Footer />
     </div>
   );
 }

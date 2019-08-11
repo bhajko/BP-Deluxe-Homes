@@ -322,7 +322,7 @@ h6 {
 /* featured apartments */
 
 .featured-apartments {
-  padding: 5rem 0;
+  padding: 2rem 0 5rem 0;
 }
 .featured-apartments-center {
   width: 80vw;
@@ -500,7 +500,7 @@ h6 {
 /* end of single apartment*/
 /* apartmentlist */
 .apartmentslist {
-  padding: 5rem 0;
+  padding-bottom: 5rem;
 }
 .apartmentslist-center {
   width: 80vw;
@@ -634,3 +634,14 @@ input[type="range"]::-webkit-slider-thumb {
   }
 }
 /* end of apartments fitler*/
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.75rem 2rem;
+  background: var(--offWhite);
+}
+/* end of Footer */
