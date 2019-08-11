@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import defaultImg from "../images/room-1.jpeg";
 import PropTypes from "prop-types";
 
 export default function Apartment({ apartment }) {
@@ -8,9 +7,9 @@ export default function Apartment({ apartment }) {
   return (
     <article className="apartment">
       <div className="img-container">
-        <img src={images[0] || defaultImg} alt="single apartment" />
+        <img src={images[0]} alt="single apartment" />
         <div className="price-top">
-          <h6>${price}</h6>
+          <h6>€{price}</h6>
           <p>per night</p>
         </div>
         <Link to={`/apartments/${slug}`} className="btn-primary apartment-link">

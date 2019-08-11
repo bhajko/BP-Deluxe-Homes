@@ -57,7 +57,7 @@ export default function AptFilter({ apartments }) {
             name="type"
             id="type"
             value={type}
-            className="form-control"
+            className="form-control select-style"
             onChange={handleChange}
           >
             {types}
@@ -71,7 +71,7 @@ export default function AptFilter({ apartments }) {
             name="capacity"
             id="capacity"
             value={capacity}
-            className="form-control"
+            className="form-control select-style"
             onChange={handleChange}
           >
             {people}
@@ -118,7 +118,7 @@ export default function AptFilter({ apartments }) {
         {/** end of size */}
         {/** extras */}
         <div className="form-group">
-          <div className="single-extra">
+          <div className="custom-sq">
             <input
               type="checkbox"
               name="breakfast"
@@ -128,7 +128,7 @@ export default function AptFilter({ apartments }) {
             />
             <label htmlFor="breakfast">breakfast</label>
           </div>
-          <div className="single-extra">
+          <div className="custom-sq">
             <input
               type="checkbox"
               name="pets"

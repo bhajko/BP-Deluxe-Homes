@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import items from "./data";
+import Client from "./Contentful";
 
 const ApartmentContext = React.createContext();
 
@@ -20,21 +20,33 @@ class ApartmentProvider extends Component {
     pets: false
   };
 
+  getData = async () => {
+    try {
+      let res = await Client.getEntries({
+        content_type: "bpDeluxe",
+        order: "sys.createdAt"
+      });
+      let apartments = this.formatData(res.items);
+      let featuredApartments = apartments.filter(
+        apartment => apartment.featured === true
+      );
+      let maxPrice = Math.max(...apartments.map(item => item.price));
+      let maxSize = Math.max(...apartments.map(item => item.size));
+      this.setState({
+        apartments,
+        featuredApartments,
+        sortedApartments: apartments,
+        loading: false,
+        price: maxPrice,
+        size: maxSize
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   componentDidMount() {
-    let apartments = this.formatData(items);
-    let featuredApartments = apartments.filter(
-      apartment => apartment.featured === true
-    );
-    let maxPrice = Math.max(...apartments.map(item => item.price));
-    let maxSize = Math.max(...apartments.map(item => item.size));
-    this.setState({
-      apartments,
-      featuredApartments,
-      sortedApartments: apartments,
-      loading: false,
-      price: maxPrice,
-      size: maxSize
-    });
+    this.getData();
   }
 
   formatData(items) {

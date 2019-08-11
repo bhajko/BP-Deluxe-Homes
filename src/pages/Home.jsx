@@ -9,7 +9,10 @@ const Home = () => {
   return (
     <>
       <Hero>
-        <Banner title="Deluxe apartments" subtitle="in the heart of Budapest">
+        <Banner
+          title="Deluxe apartments"
+          subtitle="short term rentals in the heart of Budapest"
+        >
           <Link to="/apartments" className="btn-primary">
             Our apartments
           </Link>

@@ -1,18 +1,14 @@
 import React, { Component } from "react";
-import defaultBg from "../images/room-1.jpeg";
-import Hero from "../components/Hero";
 import Banner from "../components/Banner";
 import { Link } from "react-router-dom";
 import { ApartmentContext } from "../context";
-import Apartment from "../components/Apartment";
 import StyledHero from "../components/StyledHero";
 
 class SingleApartment extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      slug: this.props.match.params.slug,
-      defaultBg
+      slug: this.props.match.params.slug
     };
   }
 
@@ -44,7 +40,7 @@ class SingleApartment extends Component {
     } = apartment;
     return (
       <>
-        <StyledHero img={images[0]}>
+        <StyledHero className="single-apartment-heroImg" img={images[0]}>
           <Banner title={`${name} apartment`}>
             <Link to="/apartments" className="btn-primary">
               Back to apartments
@@ -64,8 +60,8 @@ class SingleApartment extends Component {
             </article>
             <article className="info">
               <h3>Info</h3>
-              <h6>Price: ${price}</h6>
-              <h6>Size: ${size} m2</h6>
+              <h6>Price: €{price}</h6>
+              <h6>Size: {size}m²</h6>
               <h6>
                 Capacity:{" "}
                 {capacity > 1 ? `${capacity} people` : `${capacity} person`}
