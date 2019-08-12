@@ -6,6 +6,15 @@ const StyledHero = styled.header`
   display: flex;
   align-items: center;
   justify-content: center;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: calc(60vh);
+    background: rgba(0, 0, 0, 0.3);
+  }
 `;
 
 export default StyledHero;
