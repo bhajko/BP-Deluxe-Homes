@@ -52,24 +52,6 @@ h6 {
   font-weight: bold;
   margin-bottom: 1.5em;
 }
-
-.btn-primary {
-  display: inline-block;
-  text-decoration: none;
-  letter-spacing: var(--mainSpacing);
-  color: var(--mainWhite);
-  background: var(--primaryColor);
-  padding: 0.4rem 0.9rem;
-  border: 3px solid var(--primaryColor);
-  border-radius: 3px;
-  transition: var(--mainTransition);
-  text-transform: uppercase;
-  cursor: pointer;
-}
-.btn-primary:hover {
-  background: transparent;
-  color: var(--mainWhite);
-}
 .loading {
   text-transform: capitalize;
   text-align: center;
@@ -99,31 +81,6 @@ h6 {
 }
 /* end of globals */
 /* Navbar */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 0.75rem 2rem;
-  background: var(--offWhite);
-  z-index: 2;
-}
-.nav-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-header a {
-  height: 19px;
-}
-.nav-btn {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  height: 24px;
-}
 .nav-icon {
   font-size: 1.5rem;
   color: var(--primaryColor);
@@ -154,15 +111,6 @@ h6 {
 }
 
 @media screen and (min-width: 768px) {
-  .nav-btn {
-    display: none;
-  }
-  .nav-center {
-    max-width: 1170px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-  }
   .nav-links {
     height: auto;
     display: flex;
@@ -174,192 +122,9 @@ h6 {
   }
 }
 /* end of navbar */
-/* Hero */
-.defaultHero,
-.apartmentsHero,
-.contactHero {
-  min-height: calc(100vh - 45px);
-  background: url("./images/heroBg.png") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.defaultHero:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3);
-}
-.apartmentsHero {
-  background-image: url("./images/apartmentsBg.png");
-  min-height: 60vh;
-}
-.apartmentsHero:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  min-height: calc(60vh + 45px);
-  background: rgba(0, 0, 0, 0.3);
-}
-.contactHero {
-  background-image: url("./images/contactBg.png");
-  min-height: 60vh;
-}
-.contactHero:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  min-height: calc(60vh + 45px);
-  background: rgba(0, 0, 0, 0.3);
-}
-/* End of Hero */
-/* Banner */
-.banner {
-  display: inline-block;
-  color: var(--mainWhite);
-  padding: 2rem 1rem;
-  text-align: center;
-  text-transform: capitalize;
-  letter-spacing: var(--mainSpacing);
-  z-index: 1;
-}
-.banner h1 {
-  font-size: 2.5rem;
-}
-.banner div {
-  width: 10rem;
-  height: 4px;
-  background: var(--primaryColor);
-  margin: 1.7rem auto;
-}
-.banner p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-@media screen and (min-width: 576px) {
-  .banner {
-    padding: 2rem 3rem;
-  }
-  .banner h1 {
-    font-size: 3rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .banner {
-    padding: 2rem 6rem;
-  }
-  .banner h1 {
-    font-size: 4rem;
-  }
-}
-/* End of Banner */
-/* Title */
-.section-title {
-  text-align: center;
-  margin-bottom: 4rem;
-}
-.section-title h4 {
-  font-size: 2rem;
-  letter-spacing: var(--mainSpacing);
-  text-transform: capitalize;
-  margin-bottom: 1rem;
-}
-.section-title div {
-  width: 5rem;
-  height: 4px;
-  margin: 0 auto;
-  background: var(--primaryColor);
-}
-@media only screen and (max-width: 321px) {
-  .section-title h4 {
-    font-size: 1.5em;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .section-title h4 {
-    font-size: 1.8em;
-  }
-}
-/* end of Title */
-
-/* services */
-.services {
-  padding: 5rem 0;
-}
-.services {
-  background: var(--mainWhite);
-  text-align: center;
-}
-.services-center {
-  width: 90vw;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
-  grid-row-gap: 2rem;
-  grid-column-gap: 50px;
-}
-.service span {
-  display: inline-block;
-  color: var(--primaryColor);
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-}
-.services h6 {
-  letter-spacing: var(--mainSpacing);
-}
-.services p {
-  width: 80%;
-  margin: 0 auto;
-}
-@media screen and (min-width: 992px) {
-  .services-center {
-    width: 95vw;
-    max-width: 1170px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .services p {
-    width: 100%;
-  }
-}
-/*end of services */
-/* featured apartments */
-
-.featured-apartments {
-  padding: 2rem 0 5rem 0;
-}
-.featured-apartments-center {
-  width: 80vw;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  grid-row-gap: 2rem;
-  grid-column-gap: 40px;
-}
-@media screen and (min-width: 776px) {
-  .featured-apartments-center {
-    width: 90vw;
-    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-  }
-}
-@media screen and (min-width: 992px) {
-  .featured-apartments-center {
-    width: 95vw;
-    max-width: 1170px;
-  }
-}
-/* end pf featured apartments */
 /* apartment */
-.apartment {
+/* .apartment {
   box-shadow: var(--lightShadow);
   transition: var(--mainTransition);
 }
@@ -374,8 +139,8 @@ h6 {
   width: 100%;
   display: block;
   transition: var(--mainTransition);
-}
-.price-top {
+} */
+/* .price-top {
   position: absolute;
   top: 0;
   left: 0;
@@ -392,7 +157,7 @@ h6 {
   font-size: 0.9rem;
   font-weight: 300;
   letter-spacing: var(--mainSpacing);
-}
+} */
 .apartment-link {
   position: absolute;
   top: 50%;
@@ -400,19 +165,19 @@ h6 {
   transform: scale(0);
   transition: all 0.3s linear;
 }
-.img-container:hover {
+/* .img-container:hover {
   background: rgba(0, 0, 0, 0.8);
 }
 .img-container:hover img {
   opacity: 0.3;
-}
+} */
 .img-container:hover .price-top {
   opacity: 0;
 }
 .img-container:hover .apartment-link {
   transform: translate(-50%, -50%) scale(1);
 }
-.apartment-info {
+/* .apartment-info {
   background: var(--mainGrey);
   color: var(--mainBlack);
   text-transform: capitalize;
@@ -420,7 +185,7 @@ h6 {
   text-align: center;
   font-weight: 700;
   letter-spacing: var(--mainSpacing);
-}
+} */
 /* end of apartment  */
 /* single apartment*/
 

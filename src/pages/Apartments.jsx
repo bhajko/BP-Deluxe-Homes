@@ -1,17 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
 import Banner from "../components/Banner";
 import AptContainer from "../components/AptContainer";
+import Button from "../elements/Button";
+import ApartmentsBg from "../images/apartmentsBg.png";
 
 const Apartments = () => {
   return (
     <>
-      <Hero hero="apartmentsHero">
+      <Hero height="60vh" img={ApartmentsBg}>
         <Banner title="Our apartments">
-          <Link to="/" className="btn-primary">
-            Return home
-          </Link>
+          <Button to="/">Return home</Button>
         </Banner>
       </Hero>
       <AptContainer />

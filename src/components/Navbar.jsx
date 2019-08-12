@@ -2,6 +2,48 @@ import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import { TiThMenu } from "react-icons/ti";
 import logo from "../images/logo.svg";
+import styled from "styled-components";
+
+const NavBar = styled.nav`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.75rem 2rem;
+  background: ${props => props.theme.offWhite};
+  z-index: 2;
+`;
+
+const NavCenter = styled.div`
+  @media screen and (min-width: 768px) {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+`;
+
+const NavHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    height: 19px;
+  }
+`;
+
+const NavBtn = styled.button`
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  height: 24px;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`;
 
 class Navbar extends Component {
   state = {
@@ -13,16 +55,16 @@ class Navbar extends Component {
   };
   render() {
     return (
-      <nav className="navbar">
-        <div className="nav-center">
-          <div className="nav-header">
+      <NavBar>
+        <NavCenter>
+          <NavHeader>
             <NavLink to="/">
               <img src={logo} alt="logo" />
             </NavLink>
-            <button type="button" className="nav-btn" onClick={this.toggle}>
+            <NavBtn onClick={this.toggle}>
               <TiThMenu className="nav-icon" />
-            </button>
-          </div>
+            </NavBtn>
+          </NavHeader>
           <div>
             <ul
               className={this.state.isOpen ? "nav-links show-nav" : "nav-links"}
@@ -44,8 +86,8 @@ class Navbar extends Component {
               </li>
             </ul>
           </div>
-        </div>
-      </nav>
+        </NavCenter>
+      </NavBar>
     );
   }
 }

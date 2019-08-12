@@ -1,11 +1,18 @@
 import React from "react";
+import Header from "../elements/Header";
+import HeroBg from "../images/heroBg.png";
 
-const Hero = ({ children, hero }) => {
-  return <header className={hero}>{children}</header>;
+const Hero = ({ children, height, img }) => {
+  return (
+    <Header height={height} img={img}>
+      {children}
+    </Header>
+  );
 };
 
 Hero.defaultProps = {
-  hero: "defaultHero"
+  height: "100vh",
+  img: HeroBg
 };
 
 export default Hero;

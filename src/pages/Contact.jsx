@@ -1,18 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
 import Banner from "../components/Banner";
 import { IconContext } from "react-icons";
 import { FaMapMarker, FaPhone, FaAt } from "react-icons/fa";
+import Button from "../elements/Button";
+import ContactBg from "../images/contactBg.png";
 
 const Contact = () => {
   return (
     <>
-      <Hero hero="contactHero">
+      <Hero height="60vh" img={ContactBg}>
         <Banner title="Contact us">
-          <Link to="/" className="btn-primary">
-            Return home
-          </Link>
+          <Button to="/">Return home</Button>
         </Banner>
       </Hero>
       <div className="contact-wrapper">

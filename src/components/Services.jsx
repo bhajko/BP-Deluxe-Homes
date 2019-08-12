@@ -6,6 +6,47 @@ import {
   FaCocktail,
   FaPhoneVolume
 } from "react-icons/fa";
+import styled from "styled-components";
+
+const ServicesSection = styled.section`
+  padding: 5rem 0;
+  background: ${props => props.theme.mainWhite};
+  text-align: center;
+  h6 {
+    letter-spacing: var(--mainSpacing);
+  }
+  p {
+    width: 80%;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: 1200px) {
+    p {
+      width: 100%;
+    }
+  }
+`;
+
+const ServicesCenter = styled.div`
+  width: 90vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  grid-row-gap: 2rem;
+  grid-column-gap: 50px;
+  @media screen and (min-width: 992px) {
+    width: 95vw;
+    max-width: 1170px;
+  }
+`;
+
+const ServiceArticle = styled.article`
+  span {
+    display: inline-block;
+    color: ${props => props.theme.primaryColor};
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+`;
 
 export default class Services extends Component {
   state = {
@@ -35,20 +76,20 @@ export default class Services extends Component {
 
   render() {
     return (
-      <section className="services">
+      <ServicesSection>
         <Title title="services" />
-        <div className="services-center">
+        <ServicesCenter>
           {this.state.services.map((service, index) => {
             return (
-              <article key={index} className="service">
+              <ServiceArticle key={index}>
                 <span>{service.icon}</span>
                 <h6>{service.title}</h6>
                 <p>{service.info}</p>
-              </article>
+              </ServiceArticle>
             );
           })}
-        </div>
-      </section>
+        </ServicesCenter>
+      </ServicesSection>
     );
   }
 }
