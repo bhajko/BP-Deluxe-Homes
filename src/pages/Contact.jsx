@@ -5,6 +5,25 @@ import { IconContext } from "react-icons";
 import { FaMapMarker, FaPhone, FaAt } from "react-icons/fa";
 import Button from "../elements/Button";
 import ContactBg from "../images/contactBg.png";
+import styled from "styled-components";
+
+const ContactWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+`;
+
+const Map = styled.div`
+  width: 500px;
+`;
+
+const Contacts = styled.div``;
+
+const ContactDetails = styled.div`
+  display: flex;
+  margin-bottom: 2em;
+`;
 
 const Contact = () => {
   return (
@@ -14,12 +33,12 @@ const Contact = () => {
           <Button to="/">Return home</Button>
         </Banner>
       </Hero>
-      <div className="contact-wrapper">
-        <div className="map">
+      <ContactWrapper>
+        <Map>
           <p>ide jön a map</p>
-        </div>
-        <div className="contact-details">
-          <div className="contact-details-inner">
+        </Map>
+        <Contacts>
+          <ContactDetails>
             <IconContext.Provider
               value={{
                 color: "#bf9b30",
@@ -30,8 +49,8 @@ const Contact = () => {
               <FaPhone />
             </IconContext.Provider>
             <p>+36 20 111 222 3</p>
-          </div>
-          <div className="contact-details-inner">
+          </ContactDetails>
+          <ContactDetails>
             <IconContext.Provider
               value={{
                 color: "#bf9b30",
@@ -42,8 +61,8 @@ const Contact = () => {
               <FaAt />
             </IconContext.Provider>
             <p>info@bpdeluxehomes.com</p>
-          </div>
-          <div className="contact-details-inner">
+          </ContactDetails>
+          <ContactDetails>
             <IconContext.Provider
               value={{
                 color: "#bf9b30",
@@ -54,9 +73,9 @@ const Contact = () => {
               <FaMapMarker />
             </IconContext.Provider>
             <p>1051 Budapest Alkotmány utca 1.</p>
-          </div>
-        </div>
-      </div>
+          </ContactDetails>
+        </Contacts>
+      </ContactWrapper>
     </>
   );
 };

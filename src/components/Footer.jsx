@@ -1,9 +1,20 @@
 import React from "react";
+import styled from "styled-components";
+
+const FooterDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.75rem 2rem;
+  background: ${props => props.theme.offWhite};
+`;
 
 export default function Footer() {
   return (
-    <div className="footer">
+    <FooterDiv>
       <p>© BPDeluxeHomes {new Date().getFullYear()}</p>
-    </div>
+    </FooterDiv>
   );
 }

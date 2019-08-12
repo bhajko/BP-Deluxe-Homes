@@ -412,38 +412,3 @@ input[type="range"]::-webkit-slider-thumb {
   }
 }
 /* end of apartments fitler*/
-/* Contact*/
-.contact-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5rem 0;
-}
-.map {
-  width: 500px;
-}
-.contact-details-inner {
-  display: flex;
-  margin-bottom: 2em;
-}
-.contactIcon {
-  margin-right: 1em;
-}
-
-@media only screen and (max-width: 768px) {
-  .contact-wrapper {
-    flex-direction: column;
-  }
-}
-/* end of Contact*/
-/* Footer */
-.footer {
-  display: flex;
-  justify-content: center;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 0.75rem 2rem;
-  background: var(--offWhite);
-}
-/* end of Footer */
