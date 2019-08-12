@@ -62,13 +62,6 @@ h6 {
   text-transform: uppercase;
   margin: 2rem 0;
 }
-.empty-search {
-  text-align: center;
-  text-transform: capitalize;
-  margin: 2rem 0;
-  padding: 1rem;
-  letter-spacing: var(--mainSpacing);
-}
 @media only screen and (max-width: 321px) {
   html {
     font-size: 14px;
@@ -187,6 +180,7 @@ h6 {
   letter-spacing: var(--mainSpacing);
 } */
 /* end of apartment  */
+
 /* single apartment*/
 
 .single-apartment {
@@ -276,31 +270,7 @@ h6 {
   }
 }
 /* end of single apartment*/
-/* apartmentlist */
-.apartmentslist {
-  padding-bottom: 5rem;
-}
-.apartmentslist-center {
-  width: 80vw;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-  grid-row-gap: 2rem;
-  grid-column-gap: 30px;
-}
 
-@media screen and (min-width: 776px) {
-  .apartmentslist-center {
-    width: 90vw;
-  }
-}
-@media screen and (min-width: 992px) {
-  .apartmentslist-center {
-    width: 95vw;
-    max-width: 1170px;
-  }
-}
-/* end of apartmentlist */
 /*  apartments fitler*/
 .filter-container {
   padding: 5rem 0;
