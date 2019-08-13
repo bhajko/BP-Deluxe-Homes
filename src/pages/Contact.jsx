@@ -23,6 +23,9 @@ const Contacts = styled.div``;
 const ContactDetails = styled.div`
   display: flex;
   margin-bottom: 2em;
+  p {
+    margin-left: 1em;
+  }
 `;
 
 const Contact = () => {
@@ -42,8 +45,7 @@ const Contact = () => {
             <IconContext.Provider
               value={{
                 color: "#bf9b30",
-                size: "1.5em",
-                className: "contactIcon"
+                size: "1.5em"
               }}
             >
               <FaPhone />
@@ -54,8 +56,7 @@ const Contact = () => {
             <IconContext.Provider
               value={{
                 color: "#bf9b30",
-                size: "1.5em",
-                className: "contactIcon"
+                size: "1.5em"
               }}
             >
               <FaAt />
@@ -66,8 +67,7 @@ const Contact = () => {
             <IconContext.Provider
               value={{
                 color: "#bf9b30",
-                size: "1.5em",
-                className: "contactIcon"
+                size: "1.5em"
               }}
             >
               <FaMapMarker />
