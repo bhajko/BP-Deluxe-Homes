@@ -16,7 +16,6 @@ const NavBar = styled.nav`
 `;
 
 const NavCenter = styled.div`
-  /* height: 2em; */
   @media screen and (min-width: 768px) {
     max-width: 1170px;
     margin: 0 auto;
@@ -97,7 +96,7 @@ class Navbar extends Component {
             <NavLink to="/">
               <img src={logo} alt="logo" />
             </NavLink>
-            <NavBtn onClick={this.toggle}>
+            <NavBtn onClick={this.toggle} onBlur={this.toggle}>
               <IconContext.Provider
                 value={{ color: "#bf9b30", size: "1.5rem" }}
               >
