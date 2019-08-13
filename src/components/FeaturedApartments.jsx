@@ -16,7 +16,7 @@ const FeaturedApartmentsCenter = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   grid-row-gap: 2rem;
   grid-column-gap: 40px;
-  @media screen and (min-width: 776px) {
+  @media screen and (min-width: 724px) {
     width: 90vw;
     grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   }
