@@ -66,6 +66,7 @@ const NavLinks = styled.ul`
     letter-spacing: ${props => props.theme.mainSpacing};
     &:hover {
       color: ${props => props.theme.primaryColor};
+      cursor: pointer;
     }
   }
 
