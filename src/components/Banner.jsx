@@ -33,6 +33,9 @@ const BannderDiv = styled.div`
     h1 {
       font-size: 4rem;
     }
+    p {
+      font-size: 1.6em;
+    }
   }
 `;
 

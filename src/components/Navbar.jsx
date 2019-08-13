@@ -16,12 +16,14 @@ const NavBar = styled.nav`
 `;
 
 const NavCenter = styled.div`
+  /* height: 2em; */
   @media screen and (min-width: 768px) {
     max-width: 1170px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 2em;
   }
 `;
 

@@ -54,11 +54,11 @@ const GlobalStyle = createGlobalStyle`
     font-size: 14px;
     }
   }
-  @media only screen and (min-width: 768px) {
+  /* @media only screen and (min-width: 768px) {
     html {
       font-size: 16px;
     }
-  }
+  } */
 `;
 
 const theme = {
