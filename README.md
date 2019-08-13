@@ -30,8 +30,8 @@ npm run start
 
 ## Tech stack
 
-- [React](https://reactjs.org/) - JS framework
-- [Styled Components](https://www.styled-components.com/) - CSS in JS framework
+- [React](https://reactjs.org/) - JS library
+- [Styled Components](https://www.styled-components.com/) - CSS in JS library
 - [Contentful](https://www.contentful.com/) - headless CMS
 
 ## Author
