@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export default styled.header`
-  min-height: calc(${props => props.height} - 45px);
+  min-height: calc(${props => props.height} - 40px);
   background: url(${props => props.img}) center/cover no-repeat;
   display: flex;
   align-items: center;

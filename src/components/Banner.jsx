@@ -3,11 +3,11 @@ import styled from "styled-components";
 
 const BannderDiv = styled.div`
   display: inline-block;
-  color: var(--mainWhite);
+  color: ${props => props.theme.mainWhite};
   padding: 2rem 1rem;
   text-align: center;
   text-transform: capitalize;
-  letter-spacing: var(--mainSpacing);
+  letter-spacing: ${props => props.theme.mainSpacing};
   z-index: 1;
   h1 {
     font-size: 2.5rem;
