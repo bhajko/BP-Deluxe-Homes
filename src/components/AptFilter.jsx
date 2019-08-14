@@ -90,36 +90,6 @@ const SizeInputs = styled.div`
   }
 `;
 
-const CustomCB = styled.div`
-  font-size: 16px;
-  line-height: 20px;
-  input[type="checkbox"] {
-    display: none;
-  }
-  input:checked ~ label:before {
-    content: "\2714";
-    color: #bf9b30;
-  }
-  label {
-    cursor: pointer;
-  }
-  label:before {
-    display: inline-block;
-    width: 20px;
-    margin-right: 5px;
-    content: "\00a0";
-    text-align: center;
-    background: #eee;
-  }
-  label:hover::before {
-    background: #bbb;
-  }
-  input:checked ~ label:before {
-    content: "\2714";
-    color: #bf9b30;
-  }
-`;
-
 // get all uniquie values
 const getUnique = (items, value) => {
   return [...new Set(items.map(item => item[value]))];
