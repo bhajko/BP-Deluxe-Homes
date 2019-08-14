@@ -6,19 +6,63 @@ import { FaMapMarker, FaPhone, FaAt } from "react-icons/fa";
 import Button from "../elements/Button";
 import ContactBg from "../images/contactBg.png";
 import styled from "styled-components";
+import {
+  GoogleMap,
+  withScriptjs,
+  withGoogleMap,
+  Marker
+} from "react-google-maps";
+
+function Map() {
+  return (
+    <GoogleMap
+      defaultZoom={15}
+      defaultCenter={{ lat: 47.499845, lng: 19.048502 }}
+    >
+      <Marker position={{ lat: 47.5071801, lng: 19.0487008 }} />
+    </GoogleMap>
+  );
+}
+
+const WrappedMap = withScriptjs(withGoogleMap(Map));
 
 const ContactWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5rem 0;
+  padding: 3rem 0;
+  @media screen and (max-width: 1150px) {
+    flex-direction: column;
+  }
 `;
 
-const Map = styled.div`
-  width: 500px;
+const MapDiv = styled.div`
+  width: 600px;
+  height: 400px;
+  padding-right: 3em;
+  @media screen and (max-width: 1150px) {
+    padding-right: 0;
+  }
+  @media screen and (max-width: 768px) {
+    width: 500px;
+    height: 300px;
+  }
+  @media screen and (max-width: 550px) {
+    width: 400px;
+    height: 200px;
+  }
+  @media screen and (max-width: 430px) {
+    width: 300px;
+    height: 180px;
+  }
 `;
 
-const Contacts = styled.div``;
+const Contacts = styled.div`
+  padding: 2em;
+  @media screen and (max-width: 1150px) {
+    padding-bottom: 0;
+  }
+`;
 
 const ContactDetails = styled.div`
   display: flex;
@@ -37,9 +81,16 @@ const Contact = () => {
         </Banner>
       </Hero>
       <ContactWrapper>
-        <Map>
-          <p>ide jön a map</p>
-        </Map>
+        <MapDiv>
+          <WrappedMap
+            googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${
+              process.env.REACT_APP_GOOGLE_KEY
+            }`}
+            loadingElement={<div style={{ height: "100%" }} />}
+            containerElement={<div style={{ height: "100%" }} />}
+            mapElement={<div style={{ height: "100%" }} />}
+          />
+        </MapDiv>
         <Contacts>
           <ContactDetails>
             <IconContext.Provider
@@ -72,7 +123,7 @@ const Contact = () => {
             >
               <FaMapMarker />
             </IconContext.Provider>
-            <p>1051 Budapest Alkotmány utca 1.</p>
+            <p>1054 Budapest Alkotmány utca 1.</p>
           </ContactDetails>
         </Contacts>
       </ContactWrapper>
