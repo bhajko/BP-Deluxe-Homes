@@ -33,6 +33,7 @@ const ContactWrapper = styled.div`
   padding: 3rem 0;
   @media screen and (max-width: 1150px) {
     flex-direction: column;
+    padding: 0;
   }
 `;
 
@@ -42,18 +43,7 @@ const MapDiv = styled.div`
   padding-right: 3em;
   @media screen and (max-width: 1150px) {
     padding-right: 0;
-  }
-  @media screen and (max-width: 768px) {
-    width: 500px;
-    height: 300px;
-  }
-  @media screen and (max-width: 550px) {
-    width: 400px;
-    height: 200px;
-  }
-  @media screen and (max-width: 430px) {
-    width: 300px;
-    height: 180px;
+    width: 100%;
   }
 `;
 

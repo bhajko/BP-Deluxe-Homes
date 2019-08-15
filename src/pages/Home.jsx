@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import Banner from "../components/Banner";
 import Services from "../components/Services";
 import FeaturedApartments from "../components/FeaturedApartments";
+import Map from "../components/Map";
 import Button from "../elements/Button";
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
       </Hero>
       <Services />
       <FeaturedApartments />
+      <Map />
     </>
   );
 };
