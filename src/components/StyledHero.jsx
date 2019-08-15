@@ -12,7 +12,7 @@ const StyledHero = styled.header`
     top: 0;
     left: 0;
     width: 100%;
-    min-height: calc(60vh);
+    min-height: calc(60vh - 5px);
     background: rgba(0, 0, 0, 0.3);
   }
 `;
