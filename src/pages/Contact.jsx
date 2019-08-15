@@ -83,7 +83,9 @@ const Contact = () => {
       <ContactWrapper>
         <MapDiv>
           <WrappedMap
-            googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyAGGLvW-9FttrKBeEc4CB8DBukGaqvWmcA`}
+            googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${
+              process.env.REACT_APP_GOOGLE_KEY
+            }`}
             loadingElement={<div style={{ height: "100%" }} />}
             containerElement={<div style={{ height: "100%" }} />}
             mapElement={<div style={{ height: "100%" }} />}
