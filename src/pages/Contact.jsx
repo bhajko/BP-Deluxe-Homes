@@ -32,7 +32,7 @@ const ContactWrapper = styled.div`
   align-items: center;
   padding: 3rem 0;
   @media screen and (max-width: 1150px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     padding: 0;
   }
 `;

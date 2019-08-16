@@ -8,7 +8,8 @@ const FooterDiv = styled.div`
   left: 0;
   width: 100%;
   padding: 0.75rem 2rem;
-  background: ${props => props.theme.offWhite};
+  background: ${props => props.theme.primaryColor};
+  color: ${props => props.theme.mainWhite};
 `;
 
 export default function Footer() {
