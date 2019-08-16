@@ -12,14 +12,22 @@ import {
   withGoogleMap,
   Marker
 } from "react-google-maps";
+import mapStyles from "../mapStyles";
 
 function Map() {
   return (
     <GoogleMap
       defaultZoom={15}
       defaultCenter={{ lat: 47.5071801, lng: 19.0487008 }}
+      defaultOptions={{ styles: mapStyles }}
     >
-      <Marker position={{ lat: 47.5071801, lng: 19.0487008 }} />
+      <Marker
+        position={{ lat: 47.5071801, lng: 19.0487008 }}
+        icon={{
+          url: "/diamond.svg",
+          scaledSize: new window.google.maps.Size(40, 40)
+        }}
+      />
     </GoogleMap>
   );
 }
