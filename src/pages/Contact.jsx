@@ -18,11 +18,11 @@ function Map() {
   return (
     <GoogleMap
       defaultZoom={15}
-      defaultCenter={{ lat: 47.503618, lng: 19.053915 }}
+      defaultCenter={{ lat: 47.5034, lng: 19.0528 }}
       defaultOptions={{ styles: mapStyles }}
     >
       <Marker
-        position={{ lat: 47.503618, lng: 19.053915 }}
+        position={{ lat: 47.5034, lng: 19.0528 }}
         icon={{
           url: "/diamond.svg",
           scaledSize: new window.google.maps.Size(40, 40)
