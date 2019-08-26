@@ -12,14 +12,22 @@ import {
   withGoogleMap,
   Marker
 } from "react-google-maps";
+import mapStyles from "../mapStyles";
 
 function Map() {
   return (
     <GoogleMap
       defaultZoom={15}
-      defaultCenter={{ lat: 47.5071801, lng: 19.0487008 }}
+      defaultCenter={{ lat: 47.5034, lng: 19.0528 }}
+      defaultOptions={{ styles: mapStyles }}
     >
-      <Marker position={{ lat: 47.5071801, lng: 19.0487008 }} />
+      <Marker
+        position={{ lat: 47.5034, lng: 19.0528 }}
+        icon={{
+          url: "/diamond.svg",
+          scaledSize: new window.google.maps.Size(40, 40)
+        }}
+      />
     </GoogleMap>
   );
 }
@@ -30,33 +38,32 @@ const ContactWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3rem 0;
   @media screen and (max-width: 1150px) {
     flex-direction: column-reverse;
-    padding: 0;
   }
 `;
 
 const MapDiv = styled.div`
-  width: 600px;
+  flex: 1;
+  width: 100%;
   height: 400px;
-  padding-right: 3em;
-  @media screen and (max-width: 1150px) {
-    padding-right: 0;
-    width: 100%;
-  }
 `;
 
 const Contacts = styled.div`
-  padding: 2em;
+  flex: 1;
+  display: flex;
+  justify-content: center;
   @media screen and (max-width: 1150px) {
-    padding-bottom: 0;
+    margin: 3em;
   }
 `;
 
 const ContactDetails = styled.div`
   display: flex;
   margin-bottom: 2em;
+  &:last-child {
+    margin-bottom: 0;
+  }
   p {
     margin-left: 1em;
   }
@@ -82,39 +89,41 @@ const Contact = () => {
           />
         </MapDiv>
         <Contacts>
-          <ContactDetails>
-            <IconContext.Provider
-              value={{
-                color: "#bf9b30",
-                size: "1.5em"
-              }}
-            >
-              <FaPhone />
-            </IconContext.Provider>
-            <p>+36 20 111 222 3</p>
-          </ContactDetails>
-          <ContactDetails>
-            <IconContext.Provider
-              value={{
-                color: "#bf9b30",
-                size: "1.5em"
-              }}
-            >
-              <FaAt />
-            </IconContext.Provider>
-            <p>info@bpdeluxehomes.com</p>
-          </ContactDetails>
-          <ContactDetails>
-            <IconContext.Provider
-              value={{
-                color: "#bf9b30",
-                size: "1.5em"
-              }}
-            >
-              <FaMapMarker />
-            </IconContext.Provider>
-            <p>1054 Budapest Alkotmány utca 1.</p>
-          </ContactDetails>
+          <div>
+            <ContactDetails>
+              <IconContext.Provider
+                value={{
+                  color: "#bf9b30",
+                  size: "1.5em"
+                }}
+              >
+                <FaPhone />
+              </IconContext.Provider>
+              <p>+36 20 111 222 3</p>
+            </ContactDetails>
+            <ContactDetails>
+              <IconContext.Provider
+                value={{
+                  color: "#bf9b30",
+                  size: "1.5em"
+                }}
+              >
+                <FaAt />
+              </IconContext.Provider>
+              <p>info@bpdeluxehomes.com</p>
+            </ContactDetails>
+            <ContactDetails>
+              <IconContext.Provider
+                value={{
+                  color: "#bf9b30",
+                  size: "1.5em"
+                }}
+              >
+                <FaMapMarker />
+              </IconContext.Provider>
+              <p>1054 Budapest Hold utca 1.</p>
+            </ContactDetails>
+          </div>
         </Contacts>
       </ContactWrapper>
     </>

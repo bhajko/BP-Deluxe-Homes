@@ -8,6 +8,7 @@ import {
   Marker,
   InfoWindow
 } from "react-google-maps";
+import mapStyles from "../mapStyles";
 
 const apartmentData = [
   {
@@ -79,6 +80,7 @@ function Maps() {
     <GoogleMap
       defaultZoom={15}
       defaultCenter={{ lat: 47.5081789, lng: 19.0487008 }}
+      defaultOptions={{ styles: mapStyles }}
     >
       {apartmentData.map((apt, index) => (
         <Marker
@@ -86,6 +88,10 @@ function Maps() {
           position={{ lat: apt.coordinates[0], lng: apt.coordinates[1] }}
           onClick={() => {
             setSelectedApt(apt);
+          }}
+          icon={{
+            url: "/diamond.svg",
+            scaledSize: new window.google.maps.Size(40, 40)
           }}
         />
       ))}
@@ -123,7 +129,7 @@ const MapSection = styled.section`
 const MapLink = styled.a`
   text-transform: uppercase;
   text-decoration: none;
-  color: #ff312e;
+  color: #bf9b30;
   font-weight: bold;
 `;
 
