@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../elements/Header";
-import HeroBg from "../images/heroBg.png";
 
 const Hero = ({ children, height, img }) => {
   return (
@@ -12,7 +11,7 @@ const Hero = ({ children, height, img }) => {
 
 Hero.defaultProps = {
   height: "100vh",
-  img: HeroBg
+  img: "https://i.ibb.co/myChRNY/heroBg.png"
 };
 
 export default Hero;

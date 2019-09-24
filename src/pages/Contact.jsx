@@ -4,7 +4,6 @@ import Banner from "../components/Banner";
 import { IconContext } from "react-icons";
 import { FaMapMarker, FaPhone, FaAt } from "react-icons/fa";
 import Button from "../elements/Button";
-import ContactBg from "../images/contactBg.png";
 import styled from "styled-components";
 import {
   GoogleMap,
@@ -72,7 +71,7 @@ const ContactDetails = styled.div`
 const Contact = () => {
   return (
     <>
-      <Hero height="60vh" img={ContactBg}>
+      <Hero height="60vh" img={"https://i.ibb.co/sggt6Cz/contact-Bg.png"}>
         <Banner title="Contact us">
           <Button to="/">Return home</Button>
         </Banner>
@@ -80,9 +79,7 @@ const Contact = () => {
       <ContactWrapper>
         <MapDiv>
           <WrappedMap
-            googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${
-              process.env.REACT_APP_GOOGLE_KEY
-            }`}
+            googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_KEY}`}
             loadingElement={<div style={{ height: "100%" }} />}
             containerElement={<div style={{ height: "100%" }} />}
             mapElement={<div style={{ height: "100%" }} />}

@@ -3,12 +3,11 @@ import Hero from "../components/Hero";
 import Banner from "../components/Banner";
 import AptContainer from "../components/AptContainer";
 import Button from "../elements/Button";
-import ApartmentsBg from "../images/apartmentsBg.png";
 
 const Apartments = () => {
   return (
     <>
-      <Hero height="60vh" img={ApartmentsBg}>
+      <Hero height="60vh" img={"https://i.ibb.co/2dn0D1p/apartments-Bg.png"}>
         <Banner title="Our apartments">
           <Button to="/">Return home</Button>
         </Banner>
