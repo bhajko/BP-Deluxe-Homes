@@ -12,7 +12,7 @@
   </a>
 </p>
 
-> A company website for a fictional rental agency.
+> A company website for a rental agency.
 
 ### 🏠 [Homepage](https://bpdeluxe.bhajko.dev)
 
