@@ -11,7 +11,7 @@ const Hero = ({ children, height, img }) => {
 
 Hero.defaultProps = {
   height: "100vh",
-  img: "https://i.ibb.co/myChRNY/heroBg.png"
+  img: "https://i.ibb.co/64gtCJ8/heroBg.jpg"
 };
 
 export default Hero;

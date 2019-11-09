@@ -71,7 +71,7 @@ const ContactDetails = styled.div`
 const Contact = () => {
   return (
     <>
-      <Hero height="60vh" img={"https://i.ibb.co/sggt6Cz/contact-Bg.png"}>
+      <Hero height="60vh" img={"https://i.ibb.co/0nnNMGb/contact-Bg.jpg"}>
         <Banner title="Contact us">
           <Button to="/">Return home</Button>
         </Banner>

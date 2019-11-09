@@ -7,7 +7,7 @@ import Button from "../elements/Button";
 const Apartments = () => {
   return (
     <>
-      <Hero height="60vh" img={"https://i.ibb.co/2dn0D1p/apartments-Bg.png"}>
+      <Hero height="60vh" img={"https://i.ibb.co/L05MJP7/apartments-Bg.jpg"}>
         <Banner title="Our apartments">
           <Button to="/">Return home</Button>
         </Banner>
