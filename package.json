@@ -9,7 +9,7 @@
     "react-google-maps": "^9.4.5",
     "react-icons": "^3.7.0",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1",
+    "react-scripts": "5.0.1",
     "styled-components": "^4.3.2",
     "typeface-inter": "^3.7.0"
   },
